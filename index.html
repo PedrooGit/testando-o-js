@@ -3,19 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body{
-            background: rgb(255, 221, 152);
+        *{
+            margin: 0;
+            padding: 0;
         }
+        
+        body{
+            background: rgb(152, 214, 255);
+        }
+
+        h1{
+            padding-top: 14px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .container{
+            background: rgb(0, 62, 86);
+            height: 200px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 40px;
+        }
+
+        .perguntas{
+            position: relative;
+            color: rgb(40, 23, 1);
+        }
+
+        #opa{
+            display: contents;
+        }
+        
+        .per_1{
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            padding-top: 10px;
+            padding: 20px;
+            font-size: x-large;
+        }
+
+        .per_2{
+            position: absolute;
+            left: 20px;
+            top: 27px;
+            padding-top: 10px;
+            margin-top: 10px;
+            padding: 20px;
+            font-size: x-large;
+        }
+
+        .per_3{
+            position: absolute;
+            left: 20px;
+            top: 39px;
+            padding-top: 10px;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: x-large;
+        }
+
+
+
+
+
     </style>
     <title>Document</title>
 </head>
 <body>    
-    <h1>Multa</h1>
-    
-    <input type="number" name="texto_1" id="texto_1">
-    <input type="button" value="bot" id="bot" onclick="multa()">
-    <div id="resp"> Você tem multa: </div>
+    <h1>Idade e seçu</h1>
 
-    <script src="index_5.js"></script>
+    <div class="container">
+        <div class="perguntas">
+
+        <div class="per_1">
+            <label for="data_naci">Ano de nacimento:</label>
+            <input type="number" name="data_naci" id="data_naci">
+        </div>
+            <br>
+
+        <div class="per_2">
+            <div id="opa">
+                Seu Sexo:
+            </div>
+            <input type="radio" name="sexo" id="sexo_mas">
+            <label for="sexo_mas">Mas</label>
+            <input type="radio" name="sexo" id="sexo_fem">
+            <label for="sexo_fem">Fem</label>
+        </div>        
+            <br>
+        <div class="per_3"> 
+            <input type="button" value="verificar" id="ver" onclick="fazer()">
+            <div id="resposta">
+                Preencha o campo acima!
+            </div>
+        </div>   
+
+
+        </div>
+        <div class="respostas">
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="index_6.js"></script>
 </body>
 </html>
