@@ -3,67 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        
         *{
             margin: 0;
             padding: 0;
         }
         
         body{
-            background: rgb(152, 214, 255);
+            background: rgb(152, 255, 162);
         }
 
         h1{
-            padding-top: 14px;
-            padding-bottom: 80px;
             text-align: center;
         }
 
-        .container{
-            background: rgb(0, 62, 86);
-            height: 200px;
-            margin-left: 30%;
-            margin-right: 30%;
-            border-radius: 40px;
-        }
-
-        .perguntas{
+        #fundo{
             position: relative;
-            color: rgb(40, 23, 1);
+            margin-top: 40px;
+            margin-left: 35%;
+            margin-right: 35%;
+            height: 200px;
+            background: whitesmoke;
+            border-radius: 20px;
         }
 
-        #opa{
-            display: contents;
+        #per, #res{
+            padding: 20px;
+
         }
-        
-        .per_1{
+
+        #contar{
             position: absolute;
             left: 20px;
-            top: 10px;
-            padding-top: 10px;
-            padding: 20px;
-            font-size: x-large;
         }
 
-        .per_2{
+        #res{
             position: absolute;
-            left: 20px;
-            top: 27px;
-            padding-top: 10px;
-            margin-top: 10px;
-            padding: 20px;
-            font-size: x-large;
+            top: 110px;
         }
-
-        .per_3{
-            position: absolute;
-            left: 20px;
-            top: 39px;
-            padding-top: 10px;
-            margin-top: 30px;
-            padding: 20px;
-            font-size: x-large;
-        }
-
+    
 
 
 
@@ -72,44 +50,36 @@
     <title>Document</title>
 </head>
 <body>    
-    <h1>Idade e seçu</h1>
+    <h1>Contador</h1>
 
-    <div class="container">
-        <div class="perguntas">
-
-        <div class="per_1">
-            <label for="data_naci">Ano de nacimento:</label>
-            <input type="number" name="data_naci" id="data_naci">
-        </div>
+    <div id="fundo">
+        <div id="per">
+            <label for="inicio">Inicio: </label>
+            <input type="number" name="inicio" id="inicio">
+        
             <br>
 
-        <div class="per_2">
-            <div id="opa">
-                Seu Sexo:
-            </div>
-            <input type="radio" name="sexo" id="sexo_mas">
-            <label for="sexo_mas">Mas</label>
-            <input type="radio" name="sexo" id="sexo_fem">
-            <label for="sexo_fem">Fem</label>
-        </div>        
+            <label class="sla" for="fim">Fim: </label>
+            <input type="number" name="fim" id="fim">
+
             <br>
-        <div class="per_3"> 
-            <input type="button" value="verificar" id="ver" onclick="fazer()">
-            <div id="resposta">
-                Preencha o campo acima!
-            </div>
-        </div>   
 
-
+            <label for="passo">Passo: </label>
+            <input type="number" name="passo" id="passo">
         </div>
-        <div class="respostas">
 
+        <input type="button" value="contar" id="contar" onclick="conta()">
+        
+        <div id="res">
+            preparando a resposta....
         </div>
+
     </div>
 
 
 
 
-    <script src="index_6.js"></script>
+
+    <script src="index_7.js"></script>
 </body>
 </html>
