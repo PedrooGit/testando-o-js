@@ -23,10 +23,27 @@ function fazer(){
 }
 
 function deu_certo(){
-// fazer escrever mulher com antos anos
-// colocar no lugar do preenca acima!?
 
+    var naci = (document.getElementById('data_naci')).value;
+    var n_naci = Number(naci);
 
+    var data = new Date();
+    var ano = data.getFullYear();
+    var n_ano = Number(ano)
+
+    var idade = (n_ano - n_naci)
+
+    var sex = document.getElementsByName('sexo');
+    var genero;
+    
+    if(sex[0].checked){
+        genero = "homi";
+    }else{
+        genero = "mué";
+    }
+
+    res = document.getElementById('resposta');
+    res.innerHTML = `Voçê é ${genero} e tens ${idade} anos`
 }
 
 
