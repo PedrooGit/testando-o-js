@@ -20,7 +20,11 @@ for(let pos in array){
     console.log(`2 - a posicao ${pos} tem o numero ${array[pos]}`);
 }
 
+function soma(n1, n2){
+    return n1 + n2
+}
 
+console.log(soma(11,4));
 
 
 
